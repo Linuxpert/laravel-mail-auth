@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
+use App\Videogame;
+
+
 class VideogameSeeder extends Seeder
 {
     /**
@@ -11,6 +14,6 @@ class VideogameSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(Videogame::class, 50) -> create();
     }
 }
