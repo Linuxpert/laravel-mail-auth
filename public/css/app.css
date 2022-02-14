@@ -10969,3 +10969,15 @@ a {
   text-align: center;
 }
 
+div#videogame-table {
+  color: black;
+}
+
+div#videogame-table .card {
+  margin-bottom: 10px;
+}
+
+div#login-manager button {
+  margin: 8px;
+}
+
