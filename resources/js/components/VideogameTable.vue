@@ -1,19 +1,21 @@
 <template>
-    <div id="videogame-table" class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div v-for="videogame in videogames" :key="videogame.id" class="card">
-                    <div class="card-header">{{videogame.title}}</div>
+    <div id="videogames">
+        
+        <table border="1">
+            <tr>
+                <th>Title</th>
+                <th>Subtitle</th>
+                <th>Rating</th>
+                <th>Action</th>
 
-                    <div class="card-body">
-                        {{videogame.subtitle}}
-                        <br><br>
-                        rating: {{videogame.rating}}
-            
-                    </div>
-                </div>
-            </div>
-        </div>
+            </tr>
+
+            <tr v-for="videogame in videogames" :key="videogame.id">
+                <td>{{videogame.title}}</td>
+                <td>{{videogame.subtitle}}</td>
+                <td>{{videogame.rating}}</td>
+            </tr>
+        </table>
     </div>
 </template>
 

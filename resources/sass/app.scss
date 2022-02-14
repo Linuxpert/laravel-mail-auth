@@ -15,11 +15,9 @@ body, a{
     text-align: center;
 }
 
-div#videogame-table{
-    color: black;
-    
-    .card{
-        margin-bottom: 10px;
+div#videogames{
+    table{
+        text-align: center;
     }
 }
 
@@ -27,4 +25,5 @@ div#login-manager{
     button {
         margin: 8px;
     }
+    
 }
