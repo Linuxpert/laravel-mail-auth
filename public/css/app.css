@@ -10973,6 +10973,10 @@ div#videogames table {
   text-align: center;
 }
 
+.btn {
+  margin: 5px 15px;
+}
+
 div#login-manager button {
   margin: 8px;
 }

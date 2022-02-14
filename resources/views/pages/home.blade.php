@@ -1,7 +1,7 @@
 @extends('layouts.main-layout')
 @section('content')
     
-    <login-manager></login-manager>
-    <videogame-table></videogame-table>
+    
+    <videogame-table user="{{Auth::check()}}"></videogame-table>
 
 @endsection
