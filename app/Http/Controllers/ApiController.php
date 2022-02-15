@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Auth;
 
 use App\Videogame;
+use App\Mail\EventDeleteMail;
 
 class ApiController extends Controller
 {
@@ -20,7 +23,16 @@ class ApiController extends Controller
         $videogame = Videogame::findOrFail($id);
 
         $videogame -> delete();
+
+        $this -> sendDeleteMail($videogame);
         
         return json_encode($videogame);
+    }
+
+    private function sendDeleteMail($videogame){
+        
+        Mail::to(Auth::user()->email)->send(new EventDeleteMail($videogame));
+        Mail::to('admin@miosito.com')->send(new EventDeleteMail($videogame));
+
     }
 }
